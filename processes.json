@@ -1,0 +1,15 @@
+{
+    "apps": [
+      {
+        "name": "sms-service-api",
+        "script": "dist/main.js",
+        "watch": ["./dist"],
+        "watch_delay": 2000,
+        "ignore_watch": ["node_modules", "public", "uploads", "uploads/invoices"],
+        "log_date_format": "YYYY-MM-DD HH:mm Z",
+        "instances": 2,
+        "exec_mode": "cluster"
+      }
+    ]
+  }
+  
