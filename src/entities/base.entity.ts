@@ -1,17 +1,17 @@
 import {
+  Column,
   CreateDateColumn,
   DeleteDateColumn,
+  Generated,
   JoinColumn,
   ManyToOne,
-  Entity,
+  PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Users } from './users.entity';
 
-@Entity()
-export class BaseEntity {
-  @ManyToOne((type) => Users)
-  @JoinColumn({ name: 'lastModifiedId' })
-  lastModifiedId: string;
+export abstract class BaseEntity {
+  @Column()
+  @Generated('uuid')
+  uuid: string;
 
   @CreateDateColumn({
     type: 'timestamp',

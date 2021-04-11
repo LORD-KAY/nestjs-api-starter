@@ -3,9 +3,9 @@
  * @param text - The raw password from the user
  * @param password - Hashed password from the db
  */
-import { compareSync } from 'bcrypt';
-import { IPagination } from '../types/types';
-import { INestPaginate } from '../types/types';
+import { compareSync } from "bcrypt";
+import { IPagination } from "../types/types";
+import { INestPaginate } from "../types/types";
 
 // @ts-ignore
 export const isValidPassword = (text, password) => {
@@ -22,9 +22,9 @@ export const generateOrderCode = () => {
 
 export const sluggify = (text: string) => {
   return text
-    .replace(/\.+/g, '')
-    .replace(/\/+/g, '')
-    .replace(/\s+/g, '-')
+    .replace(/\.+/g, "")
+    .replace(/\/+/g, "")
+    .replace(/\s+/g, "-")
     .toLowerCase();
 };
 
