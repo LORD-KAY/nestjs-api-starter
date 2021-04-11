@@ -1,3 +1,19 @@
 {
-    
-}
+    "type": "postgres",
+    "host": "localhost",
+    "port": 3306,
+    "username": "postgres",
+    "password": "password",
+    "database": "kairosafrica-sms",
+    "timezone": "utc",
+    "entities": ["dist/entities/*.entity{.ts,.js}"],
+    "synchronize": false,
+    "logging": true,
+    "migrations": ["dist/migrations/*{.ts,.js}"],
+    "factories": ["dist/database/factories/*.factory{.ts.js}"],
+    "seeds": ["dist/database/seeds/*.seed{.ts,.js}"],
+    "cli": {
+      "migrationsDir": "src/migrations"
+    }
+  }
+  
